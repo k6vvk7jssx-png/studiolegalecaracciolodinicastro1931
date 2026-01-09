@@ -1,0 +1,386 @@
+ V<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avv. Giuseppe Caracciolo di Nicastro | Studio Legale 1931</title>
+    <meta name="description" content="Studio Legale Caracciolo di Nicastro. Diritto Civile, Assicurativo, Bancario e di Famiglia. Sedi a Napoli e Livorno. Fondato nel 1931.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- STILE GENERALE --- */
+        :root {
+            --primary-color: #0a2342; /* Blu Navy Istituzionale */
+            --accent-color: #c5a059; /* Oro Antico */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+        }
+
+        a { text-decoration: none; color: inherit; }
+
+        /* --- HEADER --- */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: var(--accent-color); }
+
+        .nav-links a {
+            margin-left: 20px;
+            font-weight: 500;
+            color: var(--primary-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--accent-color); }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.8)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover { background-color: #b08d4b; }
+
+        /* --- SEZIONI --- */
+        section { padding: 80px 20px; }
+        
+        .container { max-width: 1100px; margin: 0 auto; }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 20px auto 0;
+        }
+
+        /* --- CHI SIAMO --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .credentials li::before {
+            content: '✓';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* --- SERVIZI --- */
+        .services-bg { background-color: var(--light-bg); }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { margin-top: 0; font-size: 1.4rem; }
+
+        /* --- CONTATTI --- */
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info-box h3 { margin-bottom: 5px; color: var(--accent-color); font-size: 1.1rem; }
+        .contact-info-box p { margin-bottom: 20px; }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+
+        form button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        /* --- WHATSAPP FLOATING --- */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whatsapp-float:hover { background-color: #20ba5a; }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE RESPONSIVE */
+        @media (max-width: 768px) {
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2rem; }
+            .navbar { flex-direction: column; gap: 10px; }
+            .nav-links { margin-top: 10px; }
+            .nav-links a { margin: 0 10px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">Studio Legale <span>Caracciolo di Nicastro</span></div>
+            <div class="nav-links">
+                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="#aree">Attività</a>
+                <a href="#sedi">Sedi</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Avv. Giuseppe Caracciolo di Nicastro</h1>
+            <p>Tradizione giuridica dal 1931. Competenza in Diritto Civile, Assicurativo e Bancario.</p>
+            <a href="#contatti" class="btn">Richiedi una Consulenza</a>
+        </div>
+    </div>
+
+    <section id="chi-siamo">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lo Studio e il Professionista</h2>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <h3>Tradizione e Futuro</h3>
+                    <p>Lo <strong>Studio Legale Caracciolo di Nicastro</strong>, fondato dall’avv. Eraldo Caracciolo di Nicastro e proseguito nella conduzione dall’Avv. Giuseppe Caracciolo, rappresenta un punto di riferimento storico per il diritto civile.</p>
+                    <p>Coniughiamo l'esperienza consolidata della tradizione forense con un aggiornamento costante sulle nuove normative, come la recente <strong>Riforma Cartabia</strong>, per offrire una tutela legale completa e moderna.</p>
+                </div>
+                <div class="credentials">
+                    <h3>Formazione e Titoli</h3>
+                    <ul>
+                        <li>Conciliatore/Mediatore professionista (Aequitas ADR, 2010/11)</li>
+                        <li>Master Procedure Concorsuali (Sindacato Forense Napoli)</li>
+                        <li>Alta formazione in Responsabilità Sanitaria (Legge Gelli – Bianco)</li>
+                        <li>Delegato alla vendita e Custode Giudiziale</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="aree" class="services-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Aree di Competenza</h2>
+            </div>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <i class="fas fa-shield-alt fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Diritto delle Assicurazioni</h3>
+                    <p>Responsabilità civile contrattuale ed extracontrattuale. Difesa fiduciaria del gruppo Generali Italia S.p.A. e gestione sinistri Fondo di Garanzia Vittime della Strada.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-landmark fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Bancario e Finanziario</h3>
+                    <p>Consulenza in diritto Societario e Bancario. Esperienza pluriennale in Procedure Concorsuali, Diritto dell’Esecuzione e rapporti con istituti di credito.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-users fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Famiglia e Successioni</h3>
+                    <p>Separazioni e divorzi (Riforma Cartabia), Diritto delle Successioni, tutela della personalità e Amministrazioni di Sostegno per la gestione beni di incapaci.</p>
+                </div>
+
+                <div class="service-card">
+                    <i class="fas fa-home fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Gestione Patrimoniale</h3>
+                    <p>Amministrazione patrimoni immobiliari: contratti di locazione, comodato, usufrutto, compravendite e gestione delle procedure di sfratto.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contatti e Sedi</h2>
+            </div>
+            <div class="contact-wrapper">
+                
+                <div>
+                    <div class="contact-info-box" id="sedi">
+                        <h3><i class="fas fa-map-marker-alt"></i> Sede di Napoli</h3>
+                        <p>Piazza Bovio 14, 80133 Napoli</p>
+                        
+                        <h3><i class="fas fa-map-marker-alt"></i> Sede di Livorno</h3>
+                        <p>Via Carlo Bini 20, 57126 Livorno</p>
+                    </div>
+
+                    <div class="contact-info-box">
+                        <h3><i class="fas fa-phone"></i> Telefono</h3>
+                        <p><a href="tel:+393475322917">+39 347 532 2917</a></p>
+
+                        <h3><i class="fas fa-envelope"></i> Email e PEC</h3>
+                        <p>Email: <a href="mailto:info@studiocaracciolo1931.it">info@studiocaracciolo1931.it</a><br>
+                        PEC: avv.giuseppe.caracciolo@pec.studiocaracciolo1931.it</p>
+                    </div>
+                </div>
+
+                <div>
+                    <form action="https://formspree.io/f/xbddrgaq" method="POST">
+                        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+                        <input type="email" name="email" placeholder="La tua Email" required>
+                        <input type="tel" name="telefono" placeholder="Numero di Telefono">
+                        <select name="argomento" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd;">
+                            <option value="">Seleziona Argomento</option>
+                            <option value="famiglia">Diritto di Famiglia</option>
+                            <option value="assicurazioni">Sinistri/Assicurazioni</option>
+                            <option value="societario">Bancario/Societario</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                        <textarea name="messaggio" rows="5" placeholder="Descrivi brevemente il tuo caso..." required></textarea>
+                        <button type="submit">Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/393475322917" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Studio Legale Caracciolo di Nicastro. Tutti i diritti riservati.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Napoli - Livorno | P.IVA: [Inserire P.IVA]</p>
+    </footer>
+
+    </body>
+</html>

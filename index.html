@@ -1,21 +1,21 @@
-<!DOCTYPE html>
+ V<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studio Legale Caracciolo di Nicastro | Napoli e Livorno</title>
-    <meta name="description" content="Studio Legale fondato nel 1931. Esperti in Diritto Assicurativo, Responsabilità Medica, Bancario e Gestione Patrimoniale. Sedi a Napoli e Livorno.">
+    <title>Avv. Giuseppe Caracciolo di Nicastro | Studio Legale 1931</title>
+    <meta name="description" content="Studio Legale Caracciolo di Nicastro. Diritto Civile, Assicurativo, Bancario e di Famiglia. Sedi a Napoli e Livorno. Fondato nel 1931.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        /* --- STILE GENERALE E COLORI --- */
+        /* --- STILE GENERALE --- */
         :root {
-            --primary-color: #0e1c36; /* Blu Notte istituzionale */
-            --accent-color: #c5a059; /* Oro Antico - Nobiltà */
-            --light-gray: #f8f9fa;
-            --text-color: #2c3e50;
+            --primary-color: #0a2342; /* Blu Navy Istituzionale */
+            --accent-color: #c5a059; /* Oro Antico */
+            --text-color: #333;
+            --light-bg: #f8f9fa;
         }
 
         body {
@@ -26,19 +26,20 @@
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4 {
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
             color: var(--primary-color);
         }
 
+        a { text-decoration: none; color: inherit; }
+
         /* --- HEADER --- */
         header {
             background-color: #fff;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             z-index: 1000;
-            top: 0;
         }
 
         .navbar {
@@ -53,216 +54,195 @@
         .logo {
             font-size: 1.2rem;
             font-weight: 700;
+            color: var(--primary-color);
             text-transform: uppercase;
             letter-spacing: 1px;
-            line-height: 1.2;
-            color: var(--primary-color);
         }
-        .logo small { display: block; font-size: 0.7rem; color: var(--accent-color); margin-top: 5px; font-weight: 400;}
+
+        .logo span { color: var(--accent-color); }
 
         .nav-links a {
-            margin-left: 25px;
-            font-size: 0.9rem;
-            text-decoration: none;
-            color: var(--primary-color);
-            text-transform: uppercase;
+            margin-left: 20px;
             font-weight: 500;
-            transition: 0.3s;
+            color: var(--primary-color);
+            transition: color 0.3s;
         }
+
         .nav-links a:hover { color: var(--accent-color); }
 
         /* --- HERO SECTION --- */
         .hero {
-            /* Immagine di sfondo scura e autorevole (Palazzo di Giustizia o astratto legale) */
-            background: linear-gradient(rgba(14, 28, 54, 0.9), rgba(14, 28, 54, 0.7)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.8)), url('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
-            height: 90vh;
+            height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            margin-top: 80px;
+            padding: 0 20px;
+            margin-top: 60px;
         }
 
-        .hero h1 { color: white; font-size: 3rem; margin-bottom: 20px; }
-        .hero p { font-size: 1.3rem; font-weight: 300; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; opacity: 0.9; }
+        .hero-content h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
 
-        .btn-gold {
+        .hero-content p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            font-weight: 300;
+        }
+
+        .btn {
             background-color: var(--accent-color);
             color: white;
-            padding: 18px 40px;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            letter-spacing: 1px;
+            padding: 12px 30px;
             border-radius: 2px;
-            transition: 0.3s;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
         }
-        .btn-gold:hover { background-color: #b08d4b; transform: translateY(-2px); }
+
+        .btn:hover { background-color: #b08d4b; }
 
         /* --- SEZIONI --- */
-        section { padding: 90px 20px; }
+        section { padding: 80px 20px; }
+        
         .container { max-width: 1100px; margin: 0 auto; }
         
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; margin-bottom: 15px; }
-        .section-header p { color: #666; max-width: 600px; margin: 0 auto; }
-        .section-header .divider { height: 3px; width: 60px; background: var(--accent-color); margin: 20px auto 0; }
-
-        /* --- CHI SIAMO (STORIA) --- */
-        .history-box {
-            background: #fff;
-            padding: 40px;
-            border-left: 5px solid var(--accent-color);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        .section-title {
+            text-align: center;
             margin-bottom: 50px;
-            font-size: 1.1rem;
-        }
-
-        .profile-container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .profile-img {
-            flex: 1;
-            min-width: 300px;
-            height: 400px;
-            background-color: #ddd;
-            background-image: url('https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'); /* FOTO DA SOSTITUIRE CON QUELLA REALE */
-            background-size: cover;
-            background-position: center;
-            border-radius: 4px;
-            position: relative;
-        }
-        /* Etichetta sopra la foto */
-        .profile-img::after {
-            content: "Sostituire con foto reale Avv. Giuseppe";
-            position: absolute;
-            top: 50%; left: 50%; transform: translate(-50%, -50%);
-            background: rgba(0,0,0,0.7); color: white; padding: 10px; text-align: center;
-            display: none; /* Rimuovi questa riga per vedere l'avviso */
         }
         
-        .profile-bio { flex: 1.5; min-width: 300px; }
+        .section-title h2 { font-size: 2.5rem; margin-bottom: 10px; }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 20px auto 0;
+        }
 
-        /* --- AREE DI PRATICA --- */
-        .practice-grid {
+        /* --- CHI SIAMO --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .credentials ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .credentials li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .credentials li::before {
+            content: '✓';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* --- SERVIZI --- */
+        .services-bg { background-color: var(--light-bg); }
+        
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .practice-card {
-            background: #fff;
-            padding: 35px;
-            border: 1px solid #eee;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-top: 3px solid transparent;
+        .service-card {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent-color);
+            transition: transform 0.3s;
         }
-        .practice-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-            border-top: 3px solid var(--accent-color); 
-        }
-        .practice-card i { color: var(--accent-color); margin-bottom: 20px; }
-        .practice-card h3 { font-size: 1.4rem; margin-bottom: 15px; }
-        .practice-card ul { padding-left: 20px; color: #555; }
-        .practice-card li { margin-bottom: 10px; }
 
-        /* --- BANNER TERRITORIO --- */
-        .territorio-banner {
-            background-color: var(--primary-color);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .territorio-icons { display: flex; justify-content: center; gap: 50px; margin-top: 30px; flex-wrap: wrap; }
-        .city-item i { font-size: 2rem; color: var(--accent-color); margin-bottom: 10px; display: block; }
-        .city-item span { font-family: 'Playfair Display', serif; font-size: 1.2rem; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { margin-top: 0; font-size: 1.4rem; }
 
-        /* --- CONTATTI E FOOTER --- */
-        .footer-section { background-color: #111; color: #ccc; padding: 0; }
-        .footer-grid {
+        /* --- CONTATTI --- */
+        .contact-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 80px 20px;
+            gap: 50px;
         }
-        
-        .contact-info h4 { color: white; margin-bottom: 25px; font-size: 1.5rem; }
-        .contact-item { display: flex; align-items: flex-start; margin-bottom: 20px; }
-        .contact-item i { color: var(--accent-color); margin-right: 15px; margin-top: 5px; }
-        .contact-item a { color: #ccc; text-decoration: none; transition: 0.3s; }
-        .contact-item a:hover { color: white; }
 
-        /* FORM */
-        .form-box { background: #1a1a1a; padding: 30px; border-radius: 4px; }
-        .form-box h4 { color: white; margin-bottom: 20px; }
-        form input, form select, form textarea {
+        .contact-info-box h3 { margin-bottom: 5px; color: var(--accent-color); font-size: 1.1rem; }
+        .contact-info-box p { margin-bottom: 20px; }
+
+        form input, form textarea {
             width: 100%;
-            padding: 15px;
+            padding: 12px;
             margin-bottom: 15px;
-            border: 1px solid #333;
-            background: #222;
-            color: white;
-            font-family: 'Roboto', sans-serif;
-            box-sizing: border-box; /* Fix padding issue */
+            border: 1px solid #ddd;
+            font-family: inherit;
         }
+
         form button {
-            background-color: var(--accent-color);
+            background-color: var(--primary-color);
             color: white;
             border: none;
-            padding: 18px;
-            width: 100%;
-            font-weight: bold;
+            padding: 12px 30px;
             cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: 0.3s;
+            font-size: 1rem;
+            width: 100%;
         }
-        form button:hover { background-color: white; color: black; }
 
-        /* WHATSAPP */
+        /* --- WHATSAPP FLOATING --- */
         .whatsapp-float {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25d366;
-            color: white;
             width: 60px;
             height: 60px;
-            border-radius: 50%;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 32px;
-            box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
-            text-decoration: none;
-            z-index: 2000;
-            transition: transform 0.3s;
         }
-        .whatsapp-float:hover { transform: scale(1.1); }
 
-        .copyright { background: #000; color: #444; text-align: center; padding: 20px; font-size: 0.8rem; }
+        .whatsapp-float:hover { background-color: #20ba5a; }
 
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .navbar { flex-direction: column; text-align: center; }
-            .nav-links { margin-top: 20px; }
-            .nav-links a { display: block; margin: 10px 0; }
-            .profile-container { flex-direction: column; }
-            .profile-img { width: 100%; height: 300px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .territorio-icons { gap: 20px; }
+            .about-grid, .contact-wrapper { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2rem; }
+            .navbar { flex-direction: column; gap: 10px; }
+            .nav-links { margin-top: 10px; }
+            .nav-links a { margin: 0 10px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -270,219 +250,137 @@
 
     <header>
         <div class="navbar">
-            <div class="logo">
-                <a href="#" style="text-decoration:none; color:inherit;">
-                    Studio Legale Caracciolo <br>di Nicastro
-                </a>
-                <small>Tradizione forense dal 1931</small>
-            </div>
-            <nav class="nav-links">
-                <a href="#storia">Chi Siamo</a>
-                <a href="#competenze">Specializzazioni</a>
-                <a href="#territorio">Sedi</a>
+            <div class="logo">Studio Legale <span>Caracciolo di Nicastro</span></div>
+            <div class="nav-links">
+                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="#aree">Attività</a>
+                <a href="#sedi">Sedi</a>
                 <a href="#contatti">Contatti</a>
-            </nav>
+            </div>
         </div>
     </header>
 
     <div class="hero">
-        <div class="container">
-            <h1>Oltre 90 anni di eccellenza legale</h1>
-            <p>Esperti in Diritto Assicurativo, Responsabilità Medica e Protezione del Patrimonio Familiare.<br>
-            Assistenza legale di alto profilo a Napoli e Livorno.</p>
-            <a href="#contatti" class="btn-gold">Parla con un avvocato</a>
+        <div class="hero-content">
+            <h1>Avv. Giuseppe Caracciolo di Nicastro</h1>
+            <p>Tradizione giuridica dal 1931. Competenza in Diritto Civile, Assicurativo e Bancario.</p>
+            <a href="#contatti" class="btn">Richiedi una Consulenza</a>
         </div>
     </div>
 
-    <section id="storia">
+    <section id="chi-siamo">
         <div class="container">
-            <div class="section-header">
-                <h2>L'Avvocato e lo Studio</h2>
-                <div class="divider"></div>
+            <div class="section-title">
+                <h2>Lo Studio e il Professionista</h2>
             </div>
-
-            <div class="history-box">
-                <p>Fondato nel 1931 dall'Avv. Eraldo Caracciolo di Nicastro, lo studio rappresenta oggi la sintesi perfetta tra <strong>l'antica nobiltà della professione forense</strong> e le moderne esigenze di rapidità ed efficienza.</p>
-            </div>
-
-            <div class="profile-container">
-                <div class="profile-img"></div> 
-                
-                <div class="profile-bio">
-                    <h3>Avv. Giuseppe Caracciolo di Nicastro</h3>
-                    <p style="color: #666; font-style: italic; margin-bottom: 20px;">Patrocinante in Cassazione</p>
-                    
-                    <p>Con un'esperienza consolidata tra le Corti di Napoli e la Toscana, l'Avv. Giuseppe Caracciolo unisce la competenza tecnica a un approccio umano e riservato.</p>
-                    <p>Specializzato nella risoluzione di contenziosi complessi contro <strong>Assicurazioni e Istituti Bancari</strong>, e nella delicata gestione dei passaggi generazionali e patrimoniali.</p>
-
-                    <h4 style="margin-top: 30px; font-size: 1.1rem;">Qualifiche e Ruoli:</h4>
-                    <ul class="fa-ul" style="padding-left: 0; margin-top: 15px;">
-                        <li><span class="fa-li"><i class="fas fa-check" style="color: var(--accent-color);"></i></span>Conciliatore e Mediatore accreditato (Aequitas ADR)</li>
-                        <li><span class="fa-li"><i class="fas fa-check" style="color: var(--accent-color);"></i></span>Master in Procedure Concorsuali e Crisi d'Impresa</li>
-                        <li><span class="fa-li"><i class="fas fa-check" style="color: var(--accent-color);"></i></span>Esperto in Responsabilità Sanitaria (Legge Gelli-Bianco)</li>
-                        <li><span class="fa-li"><i class="fas fa-check" style="color: var(--accent-color);"></i></span>Custode Giudiziale e Delegato alle vendite</li>
+            <div class="about-grid">
+                <div>
+                    <h3>Tradizione e Futuro</h3>
+                    <p>Lo <strong>Studio Legale Caracciolo di Nicastro</strong>, fondato dall’avv. Eraldo Caracciolo di Nicastro e proseguito nella conduzione dall’Avv. Giuseppe Caracciolo, rappresenta un punto di riferimento storico per il diritto civile.</p>
+                    <p>Coniughiamo l'esperienza consolidata della tradizione forense con un aggiornamento costante sulle nuove normative, come la recente <strong>Riforma Cartabia</strong>, per offrire una tutela legale completa e moderna.</p>
+                </div>
+                <div class="credentials">
+                    <h3>Formazione e Titoli</h3>
+                    <ul>
+                        <li>Conciliatore/Mediatore professionista (Aequitas ADR, 2010/11)</li>
+                        <li>Master Procedure Concorsuali (Sindacato Forense Napoli)</li>
+                        <li>Alta formazione in Responsabilità Sanitaria (Legge Gelli – Bianco)</li>
+                        <li>Delegato alla vendita e Custode Giudiziale</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="competenze" style="background-color: var(--light-gray);">
+    <section id="aree" class="services-bg">
         <div class="container">
-            <div class="section-header">
-                <h2>Aree di Intervento</h2>
-                <p>Dove possiamo fare la differenza per te.</p>
-                <div class="divider"></div>
+            <div class="section-title">
+                <h2>Aree di Competenza</h2>
             </div>
-            
-            <div class="practice-grid">
-                <div class="practice-card">
-                    <i class="fas fa-car-crash fa-2x"></i>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <i class="fas fa-shield-alt fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
                     <h3>Diritto delle Assicurazioni</h3>
-                    <p>Non accettare la prima offerta. Tuteliamo i tuoi diritti in caso di sinistri complessi:</p>
-                    <ul>
-                        <li>Sinistri mortali e macrolesioni</li>
-                        <li>Contenzioso contro Generali Italia S.p.A.</li>
-                        <li>Fondo di Garanzia Vittime della Strada</li>
-                        <li>Risarcimento danni contrattuali</li>
-                    </ul>
+                    <p>Responsabilità civile contrattuale ed extracontrattuale. Difesa fiduciaria del gruppo Generali Italia S.p.A. e gestione sinistri Fondo di Garanzia Vittime della Strada.</p>
                 </div>
 
-                <div class="practice-card">
-                    <i class="fas fa-heartbeat fa-2x"></i>
-                    <h3>Malasanità e Resp. Medica</h3>
-                    <p>Hai subito un danno per errore medico? Analizziamo il tuo caso con periti esperti:</p>
-                    <ul>
-                        <li>Errori chirurgici e diagnostici</li>
-                        <li>Infezioni ospedaliere</li>
-                        <li>Consulenza Legge Gelli-Bianco</li>
-                        <li>Richiesta danni senza anticipo spese</li>
-                    </ul>
+                <div class="service-card">
+                    <i class="fas fa-landmark fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Bancario e Finanziario</h3>
+                    <p>Consulenza in diritto Societario e Bancario. Esperienza pluriennale in Procedure Concorsuali, Diritto dell’Esecuzione e rapporti con istituti di credito.</p>
                 </div>
 
-                <div class="practice-card">
-                    <i class="fas fa-landmark fa-2x"></i>
-                    <h3>Patrimonio & Diritto Bancario</h3>
-                    <p>Proteggiamo i tuoi beni da aggressioni e gestiamo i rapporti con le banche:</p>
-                    <ul>
-                        <li>Recupero crediti e Procedure Esecutive</li>
-                        <li>Anomalie bancarie e conti correnti</li>
-                        <li>Sfratti e gestione immobiliare</li>
-                        <li>Contratti di locazione blindati</li>
-                    </ul>
+                <div class="service-card">
+                    <i class="fas fa-users fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Famiglia e Successioni</h3>
+                    <p>Separazioni e divorzi (Riforma Cartabia), Diritto delle Successioni, tutela della personalità e Amministrazioni di Sostegno per la gestione beni di incapaci.</p>
                 </div>
 
-                <div class="practice-card">
-                    <i class="fas fa-users fa-2x"></i>
-                    <h3>Diritto di Famiglia</h3>
-                    <p>Gestione delle crisi familiari con riservatezza e attenzione ai minori:</p>
-                    <ul>
-                        <li>Separazioni e Divorzi (Riforma Cartabia)</li>
-                        <li>Amministrazioni di Sostegno</li>
-                        <li>Successioni ereditarie e testamenti</li>
-                        <li>Tutela del patrimonio familiare</li>
-                    </ul>
+                <div class="service-card">
+                    <i class="fas fa-home fa-2x" style="color: var(--accent-color); margin-bottom: 15px;"></i>
+                    <h3>Gestione Patrimoniale</h3>
+                    <p>Amministrazione patrimoni immobiliari: contratti di locazione, comodato, usufrutto, compravendite e gestione delle procedure di sfratto.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section id="territorio" class="territorio-banner">
+    <section id="contatti">
         <div class="container">
-            <h2>Operatività Territoriale</h2>
-            <p>Lo Studio garantisce assistenza diretta presso le corti di:</p>
-            <div class="territorio-icons">
-                <div class="city-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Napoli</span>
+            <div class="section-title">
+                <h2>Contatti e Sedi</h2>
+            </div>
+            <div class="contact-wrapper">
+                
+                <div>
+                    <div class="contact-info-box" id="sedi">
+                        <h3><i class="fas fa-map-marker-alt"></i> Sede di Napoli</h3>
+                        <p>Piazza Bovio 14, 80133 Napoli</p>
+                        
+                        <h3><i class="fas fa-map-marker-alt"></i> Sede di Livorno</h3>
+                        <p>Via Carlo Bini 20, 57126 Livorno</p>
+                    </div>
+
+                    <div class="contact-info-box">
+                        <h3><i class="fas fa-phone"></i> Telefono</h3>
+                        <p><a href="tel:+393475322917">+39 347 532 2917</a></p>
+
+                        <h3><i class="fas fa-envelope"></i> Email e PEC</h3>
+                        <p>Email: <a href="mailto:info@studiocaracciolo1931.it">info@studiocaracciolo1931.it</a><br>
+                        PEC: avv.giuseppe.caracciolo@pec.studiocaracciolo1931.it</p>
+                    </div>
                 </div>
-                <div class="city-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Livorno</span>
-                </div>
-                <div class="city-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Firenze (Corte d'Appello)</span>
+
+                <div>
+                    <form action="https://formspree.io/f/xbddrgaq" method="POST">
+                        <input type="text" name="nome" placeholder="Nome e Cognome" required>
+                        <input type="email" name="email" placeholder="La tua Email" required>
+                        <input type="tel" name="telefono" placeholder="Numero di Telefono">
+                        <select name="argomento" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd;">
+                            <option value="">Seleziona Argomento</option>
+                            <option value="famiglia">Diritto di Famiglia</option>
+                            <option value="assicurazioni">Sinistri/Assicurazioni</option>
+                            <option value="societario">Bancario/Societario</option>
+                            <option value="altro">Altro</option>
+                        </select>
+                        <textarea name="messaggio" rows="5" placeholder="Descrivi brevemente il tuo caso..." required></textarea>
+                        <button type="submit">Invia Richiesta</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contatti" class="footer-section">
-        <div class="footer-grid">
-            <div class="contact-info">
-                <h4>Contatta lo Studio</h4>
-                <p style="margin-bottom: 30px;">Prenota una consulenza preliminare per analizzare il tuo caso con professionalità e trasparenza.</p>
-                
-                <div class="contact-item">
-                    <i class="fas fa-map-pin fa-lg"></i>
-                    <div>
-                        <strong>Sede Livorno (Toscana):</strong><br>
-                        Via Carlo Bini 20, 57126 Livorno
-                    </div>
-                </div>
-                
-                <div class="contact-item">
-                    <i class="fas fa-map-pin fa-lg"></i>
-                    <div>
-                        <strong>Sede Napoli (Campania):</strong><br>
-                        Piazza Bovio 14, 80133 Napoli
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt fa-lg"></i>
-                    <div>
-                        <strong>Telefono Mobile:</strong><br>
-                        <a href="tel:+393475322917">+39 347 532 2917</a>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <i class="far fa-envelope fa-lg"></i>
-                    <div>
-                        <strong>Email:</strong><br>
-                        <a href="mailto:info@studiocaracciolo1931.it">info@studiocaracciolo1931.it</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="form-box">
-                <h4>Richiedi Analisi Preliminare</h4>
-                <form action="https://formspree.io/f/xbddrgaq" method="POST">
-                    <input type="text" name="nome" placeholder="Il tuo Nome e Cognome" required>
-                    <input type="email" name="email" placeholder="La tua Email" required>
-                    <input type="tel" name="telefono" placeholder="Il tuo Telefono (Importante)" required>
-                    
-                    <select name="motivo">
-                        <option value="">Di cosa hai bisogno?</option>
-                        <option value="malasanita">Errore Medico / Malasanità</option>
-                        <option value="sinistro">Incidente Stradale / Assicurazione</option>
-                        <option value="famiglia">Separazione / Eredità</option>
-                        <option value="banca">Problemi con Banche / Recupero Crediti</option>
-                        <option value="immobili">Sfratti / Immobili</option>
-                        <option value="altro">Altro</option>
-                    </select>
-
-                    <textarea name="messaggio" rows="4" placeholder="Descrivi brevemente il problema..." required></textarea>
-                    
-                    <button type="submit">RICHIEDI CONSULENZA GRATUITA</button>
-                    <p style="font-size: 0.8rem; color: #777; margin-top: 10px; text-align: center;">
-                        <i class="fas fa-lock"></i> I tuoi dati sono al sicuro. Rispondiamo entro 24h.
-                    </p>
-                </form>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            &copy; 2026 Studio Legale Caracciolo di Nicastro dal 1931.<br>
-            P.IVA: [INSERIRE PARTITA IVA OBBLIGATORIA] | <a href="#" style="color:#666;">Privacy Policy</a>
-        </div>
-    </section>
-
-    <a href="https://wa.me/393475322917" class="whatsapp-float" target="_blank" title="Scrivici su WhatsApp">
+    <a href="https://wa.me/393475322917" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-</body>
+    <footer>
+        <p>&copy; 2026 Studio Legale Caracciolo di Nicastro. Tutti i diritti riservati.</p>
+        <p style="font-size: 0.8rem; opacity: 0.7;">Napoli - Livorno | P.IVA: [Inserire P.IVA]</p>
+    </footer>
+
+    </body>
 </html>
